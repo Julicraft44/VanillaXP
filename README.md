@@ -1,5 +1,7 @@
 # VanillaXP
 
+Vanilla like xp command for your mcpe/mcbe PocketMine-MP server.
+
 ## How to
 
 ### Installation

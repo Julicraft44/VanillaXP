@@ -1,0 +1,13 @@
+# Made by Julicraft44
+# GitHub: https://github.com/Julicraft44
+
+# Default messages
+no-permission: "You do not have the permission to execute this command"
+syntax-error: "You need to set a xp amount"
+player-not-found: "Sorry. I cannot find the player you are looking for"
+
+# VanillaXP process messages
+substract-xp-level: "Taken %amount levels from %target"
+substract-xp: "Taken %amount experience from %target"
+add-xp-level: "Gave %amount levels to %target"
+add-xp: "Gave %amount experience to %target"

@@ -1,0 +1,16 @@
+name: VanillaXP
+main: Julicraft_44\VanillaXP\Main
+api: 4.0.0
+version: 1.0.0
+author: Julicraft_44
+description: Adds the default xp functions to your server
+
+commands:
+    xp:
+        description: Adds or removes player experience.
+        permission: vanillaxp.cmd
+        
+permissions:
+    vanillaxp.cmd:
+        description: Default permission to use the xp command
+        default: op

@@ -4,13 +4,13 @@
 
 ### Adding XP/XP-LEVEL
 
-- /xp <amount>L <playername>
-- /xp <amount> <playername>
+- /xp (amount)L (playername)
+- /xp (amount) (playername])
   
 ### Removing XP/XP-LEVEL
 
-- /xp -<amount>L <playername>
-- /xp -<amount> <playername>
+- /xp -(amount)L (playername)
+- /xp -(amount) (playername)
   
 ## Support
 

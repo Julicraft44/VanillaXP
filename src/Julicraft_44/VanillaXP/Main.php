@@ -39,6 +39,7 @@ class Main extends PluginBase {
                 }
             } else {
                 $level = $args[0];
+                $level = intval($level, 0);
                 if(isset($args[1])) {
                     $target = $this->getServer()->getPlayerExact($args[1]);
                     if($target === null || !in_array($target, $this->getServer()->getOnlinePlayers())) {

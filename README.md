@@ -1,6 +1,13 @@
 # VanillaXP
 
-## Add or remove xp from a specific player
+## How to
+
+### Installation
+
+- Download phar file
+- Put the phar file in your plugins directory
+- restart your server
+- have fun
 
 ### Adding XP/XP-LEVEL
 

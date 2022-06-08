@@ -14,7 +14,7 @@ Vanilla like xp command for your mcpe/mcbe PocketMine-MP server.
 ### Adding XP/XP-LEVEL
 
 - /xp (amount)L (playername)
-- /xp (amount) (playername])
+- /xp (amount) (playername)
   
 ### Removing XP/XP-LEVEL
 

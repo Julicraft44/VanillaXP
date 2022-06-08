@@ -78,20 +78,20 @@ class Main extends PluginBase {
             if($level < 0) {
                 if($target->getXpManager()->getXpLevel() - abs($level) < 0) {
                     $target->getXpManager()->setXpAndProgress(0, 0.0);
-                    $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($level)], $this->getConfig()->get("substract-xp-level")));
+                    $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($level)], $this->getConfig()->get("substract-xp-level")));
                     return;
                 }
                 $target->getXpManager()->subtractXpLevels(abs($level));
-                $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($level)], $this->getConfig()->get("substract-xp-level")));
+                $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($level)], $this->getConfig()->get("substract-xp-level")));
                 
             } else {
                 if($target->getXpManager()->getXpLevel() + $level >= 24791) {
                     $target->getXpManager()->setXpLevel(24790);
-                    $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $level], $this->getConfig()->get("add-xp-level")));
+                    $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $level], $this->getConfig()->get("add-xp-level")));
                     return;
                 }
                 $target->getXpManager()->addXpLevels($level);
-                $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $level], $this->getConfig()->get("add-xp-level")));
+                $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $level], $this->getConfig()->get("add-xp-level")));
             }
         }
     }
@@ -120,20 +120,20 @@ class Main extends PluginBase {
             if($xp < 0) {
                 if($target->getXpManager()->getCurrentTotalXp() - abs($xp) < 0) {
                     $target->getXpManager()->setXpAndProgress(0, 0.0);
-                    $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($xp)], $this->getConfig()->get("substract-xp-level")));
+                    $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($xp)], $this->getConfig()->get("substract-xp-level")));
                     return;
                 }
                 $target->getXpManager()->subtractXp(abs($xp));
-                $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($xp)], $this->getConfig()->get("substract-xp")));
+                $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), abs($xp)], $this->getConfig()->get("substract-xp")));
                 
             } else {
                 if($target->getXpManager()->getCurrentTotalXp() + $xp >= 24791) {
                     $target->getXpManager()->setXpLevel(24790);
-                    $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $xp], $this->getConfig()->get("add-xp-level")));
+                    $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $xp], $this->getConfig()->get("add-xp-level")));
                     return;
                 }
                 $target->getXpManager()->addXp($xp);
-                $target->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $xp], $this->getConfig()->get("add-xp")));
+                $sender->sendMessage(str_replace(["%target", "%amount"], [$target->getName(), $xp], $this->getConfig()->get("add-xp")));
             }
         }
     }

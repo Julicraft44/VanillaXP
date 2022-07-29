@@ -14,6 +14,10 @@ class Main extends PluginBase {
     
     public function onCommand(CommandSender $sender, Command $cmd, String $label, array $args): bool {
         if($cmd->getName() == "xp") {
+            if(!$sender instanceof Player) {
+                $sender->sendMessage("Please run this command in-game");
+                return false;   
+            }
             if(!$sender->hasPermission("vanillaxp.cmd")) {
                 $sender->sendMessage($this->getConfig()->get("no-permission"));
                 return false;

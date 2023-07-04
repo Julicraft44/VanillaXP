@@ -1,7 +1,7 @@
 name: VanillaXP
 main: Julicraft_44\VanillaXP\Main
-api: 4.0.0
-version: 1.0.2
+api: 5.0.0
+version: 1.1
 author: Julicraft_44
 description: Adds the default xp functions to your server
 

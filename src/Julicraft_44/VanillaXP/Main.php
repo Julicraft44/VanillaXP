@@ -14,10 +14,6 @@ class Main extends PluginBase {
     
     public function onCommand(CommandSender $sender, Command $cmd, String $label, array $args): bool {
         if($cmd->getName() == "xp") {
-            if(!$sender instanceof Player) {
-                $sender->sendMessage("Please run this command in-game");
-                return false;   
-            }
             if(!$sender->hasPermission("vanillaxp.cmd")) {
                 $sender->sendMessage($this->getConfig()->get("no-permission"));
                 return false;
@@ -59,7 +55,7 @@ class Main extends PluginBase {
         return true;
     }
     
-    public function setXpLevel(int $level, Player $sender, Player $target = null) {
+    public function setXpLevel(int $level, CommandSender $sender, Player $target = null) {
         if($target == null) {
             if($level < 0) {
                 if($sender->getXpManager()->getXpLevel() - abs($level) < 0) {
@@ -100,7 +96,7 @@ class Main extends PluginBase {
         }
     }
     
-    public function setXp(int $xp, Player $sender, Player $target = null) {
+    public function setXp(int $xp, CommandSender $sender, Player $target = null) {
         if($target == null) {
             if($xp < 0) {
                 if($sender->getXpManager()->getCurrentTotalXp() - abs($xp) < 0) {
